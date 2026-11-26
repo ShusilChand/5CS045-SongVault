@@ -1,0 +1,1 @@
+<?php require __DIR__.'/includes/bootstrap.php';logged();header('Content-Type: application/json; charset=utf-8');echo json_encode(['songs'=>search_songs($_GET)],JSON_INVALID_UTF8_SUBSTITUTE|JSON_THROW_ON_ERROR);
