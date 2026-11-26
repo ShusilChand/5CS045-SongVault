@@ -1,0 +1,1 @@
+<?php require __DIR__.'/includes/bootstrap.php';logged();$song=get_song(song_id());if($_SERVER['REQUEST_METHOD']==='POST'){csrf();$db->prepare('DELETE FROM songs WHERE id=?')->execute([$song['id']]);redirect('list-songs.php');}render('delete.twig',['song'=>$song]);
